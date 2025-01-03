@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اكتشف إسطنبول</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <style>
+   body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cover.webp');
+            background-size: cover;
+            background-position: center;
+           
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .hero button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .map {
+            height: 400px;
+            margin: 40px 0;
+        }
+        #mapCont{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: auto;
+margin-bottom: 100px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand me-auto" href="#">اكتشف إسطنبول</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">عننا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">تواصل معنا</a>
+                </li>
+            </ul>
+            <form class="d-flex mx-auto" role="search">
+                <input class="form-control me-2" type="search" placeholder="ابحث هنا" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">بحث</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>اكتشف أجمل معالم إسطنبول معنا!</h1>
+    <p>دليلك الشامل لاستكشاف أفضل الأماكن السياحية والترفيهية.</p>
+    <button onclick="location.href='#sections'">ابدأ الآن</button>
+</section>
+
+<!-- Sections -->
+<section id="sections" class="container" style="padding: 100px 0;">
+    <h2 class="section-title">أقسام الموقع</h2>
+    <div class="row">
+        <div class="col-md-3" style="margin-bottom: 20px;">
+            <div class="card">
+                <a href="1.webp" data-fancybox="gallery" data-caption="السياحة التاريخية">
+                    <img src="1.webp" class="card-img-top" alt="السياحة التاريخية">
+                </a>
+                <div class="card-body" >
+                    <h5 class="card-title">السياحة التاريخية</h5>
+                    <p class="card-text">استكشف أشهر المعالم التاريخية في إسطنبول.</p>
+                    <a href="#" class="btn btn-primary">استكشاف الآن</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="margin-bottom: 20px;">
+            <div class="card">
+                <a href="2.png" data-fancybox="gallery" data-caption="الترفيه والمغامرات">
+                    <img src="2.png" class="card-img-top" alt="الترفيه والمغامرات">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">الترفيه والمغامرات</h5>
+                    <p class="card-text">أماكن ترفيهية ممتعة لجميع أفراد العائلة.</p>
+                    <a href="#" class="btn btn-primary">استكشاف الآن</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="margin-bottom: 20px;">
+            <div class="card">
+                <a href="3.jpg" data-fancybox="gallery" data-caption="الأسواق">
+                    <img src="3.jpg" class="card-img-top" alt="الأسواق">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">الأسواق</h5>
+                    <p class="card-text">أشهر الأسواق والبازارات في إسطنبول.</p>
+                    <a href="#" class="btn btn-primary">استكشاف الآن</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="margin-bottom: 20px;">
+            <div class="card">
+                <a href="4.jpg" data-fancybox="gallery" data-caption="المطاعم">
+                    <img src="4.jpg" class="card-img-top" alt="المطاعم">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">المطاعم</h5>
+                    <p class="card-text">أفضل المطاعم التي تقدم الأطباق التركية الشهية.</p>
+                    <a href="#" class="btn btn-primary">استكشاف الآن</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section id="mapCont" class="map container">
+    <h2 class="section-title"> موقع اسطنبول</h2>
+    <div id="map" class="w-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385396.6059676668!2d29.01217945!3d41.0053215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2z2KXYs9i32YbYqNmI2YTYjCDYqtix2YPZitin!5e0!3m2!1sar!2seg!4v1735883011794!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+
+<!-- Reviews Section -->
+<!--  
+<section id="reviews" class="container" style="padding: 100px 0;">
+    <h2 class="section-title">تعليقات ومراجعات الزوار</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card p-3">
+                <p class="card-text">"تجربة مذهلة في زيارة آيا صوفيا! المكان مليء بالتاريخ والجمال."</p>
+                <p class="text-muted">- محمد علي</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <p class="card-text">"البازار الكبير هو المكان المثالي للتسوق والتعرف على الثقافة التركية."</p>
+                <p class="text-muted">- سارة إبراهيم</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <p class="card-text">"رحلة بحرية عبر مضيق البوسفور كانت تجربة لا تُنسى."</p>
+                <p class="text-muted">- أحمد يوسف</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Travel Tips Section -->
+<section id="travel-tips" class="container" style="padding: 100px;">
+    <h2 class="section-title">نصائح للسياح</h2>
+    <div class="row">
+        <div class="col-md-4" style="margin-bottom: 20px;">
+            <div class="card p-3">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-calendar-alt fa-2x  text-primary me-3" style="margin-left: 10px;"></i>
+                    <h5 class="card-title">أفضل وقت للزيارة</h5>
+                </div>
+                <p class="card-text">أفضل وقت لزيارة إسطنبول هو الربيع والخريف حيث يكون الطقس معتدلاً والمناطق السياحية أقل ازدحاماً.</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom: 20px;">
+            <div class="card p-3">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-bus fa-2x text-primary me-3"  style="margin-left: 10px;" ></i>
+                    <h5 class="card-title">وسائل النقل</h5>
+                </div>
+                <p class="card-text">استخدم بطاقة إسطنبول (Istanbul Card) للتنقل بسهولة عبر وسائل النقل العامة.</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom: 20px;">
+            <div class="card p-3">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-shield-alt fa-2x text-primary me-3"  style="margin-left: 10px;" ></i>
+                    <h5 class="card-title">الأمان</h5>
+                </div>
+                <p class="card-text">إسطنبول مدينة آمنة، ولكن احرص على مراقبة أغراضك الشخصية خاصة في الأماكن المزدحمة.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Famous Landmarks Section -->
+<section id="landmarks" class="container" style="margin-bottom: 100px; padding: 100px; background-color: rgb(250, 250, 250);">
+    <h2 class="section-title">معالم سياحية مشهورة</h2>
+    <div class="row">
+        <div class="col-md-4" style="margin-bottom: 20px;">
+            <div class="card">
+                <a href="p1.jpeg" data-fancybox="gallery" data-caption="آيا صوفيا">
+                    <img src="p1.jpeg" class="card-img-top" alt="آيا صوفيا">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">آيا صوفيا</h5>
+                    <p class="card-text">أحد أشهر المعالم التاريخية في إسطنبول، وتحفة معمارية تجمع بين الفنون البيزنطية والإسلامية.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"style="margin-bottom: 20px;">
+            <div class="card">
+                <a href="p2.jpeg" data-fancybox="gallery" data-caption="قصر توبكابي">
+                    <img src="p2.jpeg" class="card-img-top" alt="قصر توبكابي">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">قصر توبكابي</h5>
+                    <p class="card-text">مقر السلاطين العثمانيين لعدة قرون، ويتميز بعمارته الرائعة وحدائقه الجميلة.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-bottom: 20px;">
+            <div class="card">
+                <a href="p3.jpeg" data-fancybox="gallery" data-caption="المسجد الأزرق">
+                    <img src="p3.jpeg" class="card-img-top" alt="المسجد الأزرق">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">المسجد الأزرق</h5>
+                    <p class="card-text">يعتبر من أجمل المساجد في العالم، مشتهر بالقباب الزرقاء والزخارف الإسلامية الرائعة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 جميع الحقوق محفوظة | اكتشف إسطنبول</p>
+</footer>
+
+<!-- Add Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("[data-fancybox]").fancybox({
+            toolbar: true,
+            buttons: ["zoom", "slideShow", "thumbs", "close"],
+            animationEffect: "zoom",
+            transitionEffect: "fade"
+        });
+    });
+</script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+      ScrollReveal({
+        distance:'50px',
+        duration:1000,
+        delay:false
+      })
+      ScrollReveal().reveal('h1', { delay: 0 , origin:'bottom'});
+      ScrollReveal().reveal('p', { delay: 100 , origin:'bottom'});
+      ScrollReveal().reveal('.card', { delay: 100 , origin:'bottom'});
+      ScrollReveal().reveal('footer', {  origin:'bottom'});
+      ScrollReveal().reveal('iframe', {  origin:'bottom'});
+      ScrollReveal().reveal('h2', {  origin:'bottom'});
+      ScrollReveal().reveal('.hero', {  origin:'bottom'});
+      ScrollReveal().reveal('.btn', {  origin:'bottom'});
+
+
+
+    </script>
+
+    
+</body>
+</html>
